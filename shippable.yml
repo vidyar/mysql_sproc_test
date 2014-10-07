@@ -5,4 +5,4 @@ install: true
 script:
  - mysql -e 'create database `fizzbin`;'
  - mysql < create_sproc.sql
- - mysql -D fizzbin -e 'exec foobar();'
+ - mysql -D fizzbin -e 'call foobar();'
