@@ -4,10 +4,12 @@ python:
  - 2.7
  
 install: true
+
 script:
  - mysql -e 'create database if not exists `fizzbin`;'
  - mysql < create_sproc.sql
  - mysql -D fizzbin -e 'call foobar();'
  - mysql -ushippable -e "show variables like '%version';"
 #cache: true
+
 build_image: shippable/minv2
